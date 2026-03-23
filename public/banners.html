@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fishgoo 广告Banner素材</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f0f0; padding: 40px; }
+  h1 { text-align: center; margin-bottom: 10px; font-size: 28px; color: #333; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 40px; font-size: 14px; }
+  .banner-group { margin-bottom: 60px; }
+  .banner-group h2 { font-size: 18px; color: #555; margin-bottom: 6px; }
+  .banner-group .size { font-size: 13px; color: #999; margin-bottom: 16px; }
+  .banner-wrapper { display: inline-block; box-shadow: 0 8px 30px rgba(0,0,0,0.15); border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+
+  /* ====== BANNER COMMON ====== */
+  .banner { position: relative; overflow: hidden; display: flex; }
+  .banner * { font-family: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+
+  /* ====== BANNER 1: Hero 横幅 1200x628 (Facebook/Meta) ====== */
+  .b1 {
+    width: 1200px; height: 628px;
+    background: linear-gradient(135deg, #0a1628 0%, #0d2847 40%, #0f3460 100%);
+    color: #fff; align-items: center; justify-content: space-between; padding: 0 80px;
+  }
+  .b1::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,107,53,0.2) 0%, transparent 70%);
+  }
+  .b1::after {
+    content: ''; position: absolute; bottom: -150px; left: -50px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,85,255,0.15) 0%, transparent 70%);
+  }
+  .b1 .left { position: relative; z-index: 1; max-width: 600px; }
+  .b1 .logo { font-size: 24px; font-weight: 800; margin-bottom: 24px; }
+  .b1 .logo span { color: #ff6b35; }
+  .b1 h2 { font-size: 52px; font-weight: 900; line-height: 1.15; margin-bottom: 16px; letter-spacing: -1px; }
+  .b1 h2 .hl { color: #ff6b35; }
+  .b1 .desc { font-size: 18px; color: rgba(255,255,255,0.65); margin-bottom: 32px; line-height: 1.6; }
+  .b1 .cta { display: inline-block; background: linear-gradient(135deg, #ff6b35, #ff9f1c); color: #fff; padding: 14px 36px; border-radius: 10px; font-size: 18px; font-weight: 700; text-decoration: none; }
+  .b1 .right { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 16px; }
+  .b1 .stat-card {
+    background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+    padding: 18px 28px; min-width: 220px;
+  }
+  .b1 .stat-card .num { font-size: 36px; font-weight: 900; }
+  .b1 .stat-card .num span { color: #ff6b35; }
+  .b1 .stat-card .label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+  /* ====== BANNER 2: 超时赔付 1200x628 ====== */
+  .b2 {
+    width: 1200px; height: 628px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff9f1c 50%, #ffcc02 100%);
+    color: #fff; align-items: center; justify-content: center; text-align: center;
+    flex-direction: column;
+  }
+  .b2::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .b2 .content { position: relative; z-index: 1; }
+  .b2 .badge { display: inline-block; background: rgba(0,0,0,0.2); padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 24px; }
+  .b2 h2 { font-size: 64px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+  .b2 h2 .big { font-size: 80px; }
+  .b2 .rules { display: flex; gap: 40px; margin: 30px 0; justify-content: center; }
+  .b2 .rule {
+    background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+    border-radius: 14px; padding: 20px 28px; text-align: center;
+  }
+  .b2 .rule .pct { font-size: 36px; font-weight: 900; }
+  .b2 .rule .condition { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+  .b2 .logo { font-size: 20px; font-weight: 800; margin-top: 30px; }
+  .b2 .logo span { color: #0a1628; }
+  .b2 .url { font-size: 14px; opacity: 0.7; margin-top: 6px; }
+
+  /* ====== BANNER 3: 鞋包专线 1080x1080 (Instagram方图) ====== */
+  .b3 {
+    width: 1080px; height: 1080px;
+    background: linear-gradient(180deg, #0a1628 0%, #162d50 100%);
+    color: #fff; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  }
+  .b3::before {
+    content: ''; position: absolute; width: 600px; height: 600px;
+    border-radius: 50%; top: -200px; right: -200px;
+    background: radial-gradient(circle, rgba(255,107,53,0.25) 0%, transparent 70%);
+  }
+  .b3 .content { position: relative; z-index: 1; padding: 60px; }
+  .b3 .tag { display: inline-block; background: linear-gradient(135deg, #ff6b35, #ff9f1c); padding: 10px 24px; border-radius: 25px; font-size: 16px; font-weight: 700; margin-bottom: 32px; }
+  .b3 h2 { font-size: 56px; font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+  .b3 h2 .hl { color: #ff6b35; }
+  .b3 .sub { font-size: 22px; color: rgba(255,255,255,0.6); margin-bottom: 48px; }
+  .b3 .features { display: flex; flex-direction: column; gap: 20px; text-align: left; margin-bottom: 48px; }
+  .b3 .feature { display: flex; align-items: center; gap: 16px; font-size: 22px; }
+  .b3 .feature .icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+  .b3 .feature .hl { color: #ff6b35; font-weight: 700; }
+  .b3 .vs { display: flex; gap: 30px; align-items: center; margin-bottom: 48px; }
+  .b3 .vs-item { padding: 24px 36px; border-radius: 16px; text-align: center; }
+  .b3 .vs-item.old { background: rgba(255,255,255,0.06); text-decoration: line-through; opacity: 0.5; }
+  .b3 .vs-item.new { background: linear-gradient(135deg, #ff6b35, #ff9f1c); }
+  .b3 .vs-item .label { font-size: 14px; opacity: 0.7; }
+  .b3 .vs-item .price { font-size: 42px; font-weight: 900; }
+  .b3 .vs-arrow { font-size: 32px; }
+  .b3 .bottom { display: flex; align-items: center; gap: 16px; }
+  .b3 .bottom .logo { font-size: 22px; font-weight: 800; }
+  .b3 .bottom .logo span { color: #ff6b35; }
+  .b3 .bottom .url { font-size: 14px; opacity: 0.5; }
+
+  /* ====== BANNER 4: Discord横幅 1200x480 ====== */
+  .b4 {
+    width: 1200px; height: 480px;
+    background: linear-gradient(135deg, #5865F2 0%, #7289DA 50%, #99AAB5 100%);
+    color: #fff; align-items: center; justify-content: center; text-align: center;
+    flex-direction: column;
+  }
+  .b4::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .b4 .content { position: relative; z-index: 1; }
+  .b4 .flags { font-size: 32px; letter-spacing: 6px; margin-bottom: 20px; }
+  .b4 h2 { font-size: 48px; font-weight: 900; margin-bottom: 12px; }
+  .b4 h2 .hl { color: #ffd700; }
+  .b4 .desc { font-size: 20px; opacity: 0.8; margin-bottom: 28px; }
+  .b4 .pills { display: flex; gap: 12px; justify-content: center; margin-bottom: 32px; }
+  .b4 .pill { background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 25px; font-size: 15px; font-weight: 600; }
+  .b4 .cta { display: inline-block; background: #fff; color: #5865F2; padding: 14px 36px; border-radius: 10px; font-size: 18px; font-weight: 800; text-decoration: none; }
+
+  /* ====== BANNER 5: 美妆专线 竖版 1080x1920 (Stories) ====== */
+  .b5 {
+    width: 540px; height: 960px;
+    background: linear-gradient(180deg, #1a0a2e 0%, #2d1b4e 40%, #4a2070 100%);
+    color: #fff; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  }
+  .b5::before {
+    content: ''; position: absolute; width: 400px; height: 400px;
+    border-radius: 50%; bottom: -100px; left: -100px;
+    background: radial-gradient(circle, rgba(255,107,53,0.3) 0%, transparent 70%);
+  }
+  .b5::after {
+    content: ''; position: absolute; width: 300px; height: 300px;
+    border-radius: 50%; top: -50px; right: -80px;
+    background: radial-gradient(circle, rgba(200,100,255,0.2) 0%, transparent 70%);
+  }
+  .b5 .content { position: relative; z-index: 1; padding: 40px; }
+  .b5 .emoji-row { font-size: 48px; margin-bottom: 24px; letter-spacing: 8px; }
+  .b5 .tag { display: inline-block; background: linear-gradient(135deg, #ff6b35, #ff9f1c); padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 24px; }
+  .b5 h2 { font-size: 40px; font-weight: 900; line-height: 1.2; margin-bottom: 12px; }
+  .b5 h2 .hl { color: #ff6b35; }
+  .b5 .sub { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+  .b5 .items { display: flex; flex-direction: column; gap: 14px; text-align: left; margin-bottom: 36px; }
+  .b5 .item { display: flex; align-items: center; gap: 12px; font-size: 18px; background: rgba(255,255,255,0.08); padding: 14px 18px; border-radius: 12px; }
+  .b5 .item .check { color: #ff6b35; font-weight: 700; font-size: 20px; }
+  .b5 .price-block { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; margin-bottom: 28px; }
+  .b5 .price-block .from { font-size: 14px; opacity: 0.6; }
+  .b5 .price-block .price { font-size: 48px; font-weight: 900; color: #ff6b35; }
+  .b5 .price-block .unit { font-size: 16px; opacity: 0.6; }
+  .b5 .bottom-logo { font-size: 18px; font-weight: 800; }
+  .b5 .bottom-logo span { color: #ff6b35; }
+  .b5 .bottom-url { font-size: 12px; opacity: 0.4; margin-top: 4px; }
+
+  /* ====== BANNER 6: 全品类横幅 728x90 (Leaderboard) ====== */
+  .b6 {
+    width: 728px; height: 90px;
+    background: linear-gradient(90deg, #0a1628 0%, #0f3460 100%);
+    color: #fff; align-items: center; padding: 0 24px; gap: 20px;
+  }
+  .b6 .logo { font-size: 18px; font-weight: 800; white-space: nowrap; }
+  .b6 .logo span { color: #ff6b35; }
+  .b6 .sep { width: 1px; height: 40px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+  .b6 .msg { font-size: 15px; font-weight: 600; flex: 1; }
+  .b6 .msg .hl { color: #ff6b35; }
+  .b6 .pills { display: flex; gap: 6px; flex-shrink: 0; }
+  .b6 .pill { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 11px; white-space: nowrap; }
+  .b6 .cta { background: linear-gradient(135deg, #ff6b35, #ff9f1c); color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 700; white-space: nowrap; text-decoration: none; flex-shrink: 0; }
+
+  /* ====== BANNER 7: 300x250 (Medium Rectangle) ====== */
+  .b7 {
+    width: 300px; height: 250px;
+    background: linear-gradient(180deg, #0a1628 0%, #0f3460 100%);
+    color: #fff; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;
+  }
+  .b7 .logo { font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+  .b7 .logo span { color: #ff6b35; }
+  .b7 h3 { font-size: 20px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+  .b7 h3 .hl { color: #ff6b35; }
+  .b7 .desc { font-size: 12px; color: rgba(255,255,255,0.55); margin-bottom: 14px; line-height: 1.5; }
+  .b7 .cta { background: linear-gradient(135deg, #ff6b35, #ff9f1c); color: #fff; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; }
+
+  /* ====== BANNER 8: 160x600 (Skyscraper) ====== */
+  .b8 {
+    width: 160px; height: 600px;
+    background: linear-gradient(180deg, #0a1628 0%, #0f3460 100%);
+    color: #fff; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; padding: 24px 14px;
+  }
+  .b8 .logo { font-size: 16px; font-weight: 800; }
+  .b8 .logo span { color: #ff6b35; }
+  .b8 .mid { display: flex; flex-direction: column; gap: 16px; }
+  .b8 h3 { font-size: 22px; font-weight: 900; line-height: 1.2; }
+  .b8 h3 .hl { color: #ff6b35; }
+  .b8 .stats { display: flex; flex-direction: column; gap: 10px; }
+  .b8 .stat { background: rgba(255,255,255,0.08); padding: 10px; border-radius: 8px; }
+  .b8 .stat .num { font-size: 24px; font-weight: 900; color: #ff6b35; }
+  .b8 .stat .label { font-size: 10px; opacity: 0.5; }
+  .b8 .cta { background: linear-gradient(135deg, #ff6b35, #ff9f1c); color: #fff; padding: 10px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; text-decoration: none; width: 100%; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Fishgoo 广告Banner素材库</h1>
+<p class="subtitle">右键点击Banner → "另存为图片" 或 截图使用 | 所有尺寸均为标准广告规格</p>
+
+<!-- Banner 1: Facebook/Meta 横幅 -->
+<div class="banner-group">
+  <h2>Banner 1 — 品牌主横幅（Facebook/Meta广告）</h2>
+  <p class="size">1200 x 628 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b1">
+      <div class="left">
+        <div class="logo">Fish<span>goo</span></div>
+        <h2>全球<span class="hl">12国</span><br>专线直达</h2>
+        <div class="desc">英/美/加/澳 + 欧洲8国全覆盖<br>50+专线 · 最快6天签收 · 超时赔付</div>
+        <a class="cta" href="#">立即下单 →</a>
+      </div>
+      <div class="right">
+        <div class="stat-card">
+          <div class="num">12<span>+</span></div>
+          <div class="label">覆盖国家</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">50<span>+</span></div>
+          <div class="label">专线线路</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">6<span>天</span></div>
+          <div class="label">最快签收</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 2: 超时赔付 -->
+<div class="banner-group">
+  <h2>Banner 2 — 超时赔付（核心卖点广告）</h2>
+  <p class="size">1200 x 628 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b2">
+      <div class="content">
+        <div class="badge">🔥 行业首家 · 服务承诺</div>
+        <h2>超时赔付<br>最高退<span class="big">50%</span>运费</h2>
+        <div class="rules">
+          <div class="rule">
+            <div class="pct">10%</div>
+            <div class="condition">超5个工作日</div>
+          </div>
+          <div class="rule">
+            <div class="pct">30%</div>
+            <div class="condition">超5-10个工作日</div>
+          </div>
+          <div class="rule">
+            <div class="pct">50%</div>
+            <div class="condition">超10个工作日</div>
+          </div>
+        </div>
+        <div class="logo">Fish<span>goo</span></div>
+        <div class="url">www.fishgoo.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 3: 鞋包专线 Instagram方图 -->
+<div class="banner-group">
+  <h2>Banner 3 — 鞋包专线（Instagram/小红书 方图）</h2>
+  <p class="size">1080 x 1080 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b3">
+      <div class="content">
+        <div class="tag">👟 体积货福音</div>
+        <h2>鞋包专线<br>按<span class="hl">实重</span>计费</h2>
+        <div class="sub">告别泡重费，鞋盒也能保留</div>
+        <div class="features">
+          <div class="feature"><div class="icon">⚖️</div> 按<span class="hl">实际重量</span>计费，不算泡重</div>
+          <div class="feature"><div class="icon">👟</div> 可<span class="hl">保留鞋盒</span>，品牌鞋包都能走</div>
+          <div class="feature"><div class="icon">🔋</div> 支持<span class="hl">带电</span>产品</div>
+          <div class="feature"><div class="icon">📮</div> <span class="hl">10-16天</span>签收，免税清关</div>
+        </div>
+        <div class="vs">
+          <div class="vs-item old">
+            <div class="label">同行泡重价</div>
+            <div class="price">¥200+</div>
+          </div>
+          <div class="vs-arrow">→</div>
+          <div class="vs-item new">
+            <div class="label">Fishgoo实重价</div>
+            <div class="price">¥136</div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="logo">Fish<span>goo</span></div>
+          <div class="url">www.fishgoo.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 4: Discord 横幅 -->
+<div class="banner-group">
+  <h2>Banner 4 — Discord 服务器横幅 / 社群封面</h2>
+  <p class="size">1200 x 480 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b4">
+      <div class="content">
+        <div class="flags">🇬🇧 🇺🇸 🇨🇦 🇦🇺 🇩🇪 🇫🇷 🇮🇹 🇪🇸 🇳🇱 🇸🇪 🇳🇴 🇵🇱</div>
+        <h2>Fishgoo <span class="hl">全球集运</span>社区</h2>
+        <div class="desc">12国专线直达 · 50+线路覆盖 · 最快6天签收</div>
+        <div class="pills">
+          <div class="pill">✈️ 直飞专线</div>
+          <div class="pill">⏱️ 超时赔付</div>
+          <div class="pill">💄 美妆可寄</div>
+          <div class="pill">⚖️ 计实重</div>
+          <div class="pill">🚢 海运可选</div>
+        </div>
+        <a class="cta" href="#">加入社区</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 5: Stories 竖版 美妆专线 -->
+<div class="banner-group">
+  <h2>Banner 5 — 美妆专线（Stories/短视频封面 竖版）</h2>
+  <p class="size">1080 x 1920 px（显示为50%缩放）</p>
+  <div class="banner-wrapper">
+    <div class="banner b5">
+      <div class="content">
+        <div class="emoji-row">💄💋🧴</div>
+        <div class="tag">Fishgoo 美妆专线</div>
+        <h2>化妆品<br>寄<span class="hl">英国</span></h2>
+        <div class="sub">液体 · 膏体 · 口红 · 眼影 都能走</div>
+        <div class="items">
+          <div class="item"><span class="check">✓</span> 液体、膏体、粉状均可寄送</div>
+          <div class="item"><span class="check">✓</span> 免税清关，通关率 99%+</div>
+          <div class="item"><span class="check">✓</span> 8-16天签收，皇家邮政派送</div>
+          <div class="item"><span class="check">✓</span> 食品、保健品也能走</div>
+        </div>
+        <div class="price-block">
+          <div class="from">2kg 起</div>
+          <div class="price">¥124</div>
+          <div class="unit">免税清关 · 全能线路</div>
+        </div>
+        <div class="bottom-logo">Fish<span>goo</span></div>
+        <div class="bottom-url">www.fishgoo.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 6: Leaderboard -->
+<div class="banner-group">
+  <h2>Banner 6 — 通栏横幅（网站顶部/Google广告）</h2>
+  <p class="size">728 x 90 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b6">
+      <div class="logo">Fish<span>goo</span></div>
+      <div class="sep"></div>
+      <div class="msg">全球<span class="hl">12国</span>专线 · 最快<span class="hl">6天</span>签收 · 超时<span class="hl">赔付</span></div>
+      <div class="pills">
+        <div class="pill">🇬🇧 英国</div>
+        <div class="pill">🇺🇸 美国</div>
+        <div class="pill">🇦🇺 澳洲</div>
+      </div>
+      <a class="cta" href="#">立即下单</a>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 7: Medium Rectangle -->
+<div class="banner-group">
+  <h2>Banner 7 — 中矩形广告（侧边栏/信息流）</h2>
+  <p class="size">300 x 250 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b7">
+      <div class="logo">Fish<span>goo</span></div>
+      <h3>寄英国<span class="hl">最快6天</span><br>超时赔付</h3>
+      <div class="desc">12国50+专线 · 品牌美妆食品都能寄<br>鞋包按实重算，省30%运费</div>
+      <a class="cta" href="#">了解更多 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Banner 8: Skyscraper -->
+<div class="banner-group">
+  <h2>Banner 8 — 摩天大楼广告（侧边栏）</h2>
+  <p class="size">160 x 600 px</p>
+  <div class="banner-wrapper">
+    <div class="banner b8">
+      <div class="logo">Fish<span>goo</span></div>
+      <div class="mid">
+        <h3>全球<br><span class="hl">12国</span><br>专线</h3>
+        <div class="stats">
+          <div class="stat">
+            <div class="num">6天</div>
+            <div class="label">最快签收</div>
+          </div>
+          <div class="stat">
+            <div class="num">50+</div>
+            <div class="label">专线线路</div>
+          </div>
+          <div class="stat">
+            <div class="num">99%</div>
+            <div class="label">清关通过</div>
+          </div>
+        </div>
+      </div>
+      <a class="cta" href="#">立即下单</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
