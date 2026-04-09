@@ -15,17 +15,17 @@ export default function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-16 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="font-jakarta text-2xl font-extrabold text-[#141b2b]">Frequently Asked Questions</h2>
+    <section id="faq" className="py-10 md:py-16 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="font-jakarta text-xl md:text-2xl font-extrabold text-[#141b2b]">Frequently Asked Questions</h2>
           <p className="text-slate-500 text-sm mt-2">Expert insights for complex logistics operations.</p>
         </div>
         <div className="max-w-3xl mx-auto space-y-3">
           {faqs.map((f, i) => (
             <details key={f.q} className="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm group" open={i === 0 ? true : undefined}>
-              <summary className="flex justify-between items-center p-5 cursor-pointer list-none">
-                <span className="font-jakarta font-bold text-[#141b2b] text-sm">{f.q}</span>
+              <summary className="flex justify-between items-center p-4 md:p-5 cursor-pointer list-none">
+                <span className="font-jakarta font-bold text-[#141b2b] text-xs md:text-sm">{f.q}</span>
                 <span className="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform duration-300 flex-shrink-0 ml-4">expand_more</span>
               </summary>
               <div className="px-5 pb-5 pt-0 border-t border-slate-50">

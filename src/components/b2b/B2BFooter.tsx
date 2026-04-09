@@ -1,7 +1,7 @@
 export default function B2BFooter() {
   return (
     <footer className="py-10 bg-white border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
         <div className="lg:col-span-2">
           <span className="text-lg font-extrabold text-[#141b2b] font-jakarta">Fishgoo</span>
           <p className="text-slate-500 mt-3 text-xs max-w-xs leading-relaxed">B2B precision logistics. Optimized source-to-door solutions for global e-commerce sellers.</p>
@@ -30,7 +30,7 @@ export default function B2BFooter() {
           <p className="text-slate-500 text-xs">www.fishgoo.com</p>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 mt-8 pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="text-slate-400 text-[10px] font-medium">&copy; 2026 Fishgoo Global Logistics. Precision in Motion.</p>
         <span className="text-slate-300 text-[9px] font-bold">FG_B2B_V2.0</span>
       </div>

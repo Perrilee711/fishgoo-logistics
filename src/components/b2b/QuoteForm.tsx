@@ -30,43 +30,44 @@ export default function QuoteForm() {
 
   if (status === 'sent') {
     return (
-      <section id="quote" className="py-24 bg-surface">
-        <div className="max-w-2xl mx-auto px-8 text-center">
-          <span className="material-symbols-outlined text-6xl text-primary-container mb-4 block" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-          <h2 className="font-headline text-3xl font-black text-on-background mb-4">Thank You!</h2>
-          <p className="text-secondary mb-8">We received your request and will get back to you within 24 hours.</p>
-          <button onClick={() => setStatus('idle')} className="text-primary font-headline font-bold underline">Submit another request</button>
+      <section id="quote" className="py-10 md:py-16 bg-slate-50">
+        <div className="max-w-2xl mx-auto px-4 md:px-6 text-center">
+          <span className="material-symbols-outlined text-5xl text-[#00D084] mb-4 block" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+          <h2 className="font-jakarta text-2xl font-extrabold text-[#141b2b] mb-3">Thank You!</h2>
+          <p className="text-slate-500 text-sm mb-6">We received your request and will get back to you within 24 hours.</p>
+          <button onClick={() => setStatus('idle')} className="text-[#00D084] font-jakarta font-bold text-sm underline">Submit another request</button>
         </div>
       </section>
     )
   }
 
   return (
-    <section id="quote" className="py-24 bg-surface">
-      <div className="max-w-2xl mx-auto px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl font-black text-on-background tracking-tight mb-4">Get Your Custom Quote</h2>
-          <p className="text-secondary">Tell us about your business and we&apos;ll prepare a tailored logistics plan.</p>
+    <section id="quote" className="py-10 md:py-16 bg-slate-50">
+      <div className="max-w-2xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-8 md:mb-10">
+          <p className="text-[#00D084] font-extrabold text-[10px] tracking-[0.2em] uppercase mb-1">Get Started</p>
+          <h2 className="font-jakarta text-2xl font-extrabold text-[#141b2b] mb-2">Get Your Custom Quote</h2>
+          <p className="text-slate-500 text-sm">Tell us about your business and we&apos;ll prepare a tailored logistics plan.</p>
         </div>
-        <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-sm border border-surface-container space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="bg-white rounded-lg p-5 md:p-8 shadow-sm border border-slate-200 space-y-4 md:space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <div>
-              <label className="block text-sm font-bold text-on-background mb-2">Full Name *</label>
-              <input name="name" required className="w-full border border-surface-container-high rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="John Smith" />
+              <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Full Name *</label>
+              <input name="name" required className="w-full bg-slate-50 border border-slate-200 rounded text-sm px-3 md:px-4 py-2.5 focus:ring-[#00D084] focus:border-[#00D084] focus:outline-none" placeholder="John Smith" />
             </div>
             <div>
-              <label className="block text-sm font-bold text-on-background mb-2">Business Email *</label>
-              <input name="email" type="email" required className="w-full border border-surface-container-high rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="john@company.com" />
+              <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Business Email *</label>
+              <input name="email" type="email" required className="w-full bg-slate-50 border border-slate-200 rounded text-sm px-3 md:px-4 py-2.5 focus:ring-[#00D084] focus:border-[#00D084] focus:outline-none" placeholder="john@company.com" />
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             <div>
-              <label className="block text-sm font-bold text-on-background mb-2">Company Name</label>
-              <input name="company" className="w-full border border-surface-container-high rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Company Ltd." />
+              <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Company Name</label>
+              <input name="company" className="w-full bg-slate-50 border border-slate-200 rounded text-sm px-3 md:px-4 py-2.5 focus:ring-[#00D084] focus:border-[#00D084] focus:outline-none" placeholder="Company Ltd." />
             </div>
             <div>
-              <label className="block text-sm font-bold text-on-background mb-2">Monthly Shipping Volume</label>
-              <select name="volume" className="w-full border border-surface-container-high rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-container bg-white">
+              <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Monthly Shipping Volume</label>
+              <select name="volume" className="w-full bg-slate-50 border border-slate-200 rounded text-sm px-3 md:px-4 py-2.5 focus:ring-[#00D084] focus:border-[#00D084] focus:outline-none">
                 <option value="">Select...</option>
                 <option value="1-50">1-50 parcels/month</option>
                 <option value="50-200">50-200 parcels/month</option>
@@ -76,17 +77,17 @@ export default function QuoteForm() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-bold text-on-background mb-2">Tell us about your needs</label>
-            <textarea name="message" rows={4} className="w-full border border-surface-container-high rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-container resize-none" placeholder="Products you ship, destination countries, current challenges..." />
+            <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">Tell us about your needs</label>
+            <textarea name="message" rows={3} className="w-full bg-slate-50 border border-slate-200 rounded text-sm px-3 md:px-4 py-2.5 focus:ring-[#00D084] focus:border-[#00D084] focus:outline-none resize-none" placeholder="Products you ship, destination countries, current challenges..." />
           </div>
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="primary-gradient text-white w-full py-4 rounded-lg font-headline font-bold text-lg shadow-lg shadow-primary/20 disabled:opacity-60"
+            className="bg-[#00D084] text-white w-full py-3 rounded font-bold text-sm shadow-sm hover:brightness-105 active:scale-[0.99] transition-all disabled:opacity-60"
           >
             {status === 'sending' ? 'Sending...' : 'Request Free Quote'}
           </button>
-          {status === 'error' && <p className="text-error text-sm text-center">Something went wrong. Please try again or email B2B@fishgoo.com directly.</p>}
+          {status === 'error' && <p className="text-red-500 text-xs text-center">Something went wrong. Please try again or email B2B@fishgoo.com directly.</p>}
         </form>
       </div>
     </section>

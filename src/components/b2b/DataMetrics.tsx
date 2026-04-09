@@ -6,15 +6,15 @@ export default function DataMetrics() {
   ]
 
   return (
-    <section className="py-6 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <section className="py-4 md:py-6 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-3 gap-2 md:gap-4">
           {metrics.map((m) => (
-            <div key={m.label} className="flex items-center gap-4 bg-white px-5 py-4 rounded border border-slate-200">
-              <div className="text-[#00D084] font-extrabold text-2xl tracking-tighter">{m.value}</div>
-              <div className="text-xs">
-                <p className="font-extrabold text-slate-900">{m.label}</p>
-                <p className="text-slate-400 font-bold tracking-tight uppercase text-[9px]">{m.sub}</p>
+            <div key={m.label} className="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4 bg-white px-3 md:px-5 py-3 md:py-4 rounded border border-slate-200">
+              <div className="text-[#00D084] font-extrabold text-lg md:text-2xl tracking-tighter">{m.value}</div>
+              <div className="text-[10px] md:text-xs">
+                <p className="font-extrabold text-slate-900 leading-tight">{m.label}</p>
+                <p className="text-slate-400 font-bold tracking-tight uppercase text-[8px] md:text-[9px] hidden md:block">{m.sub}</p>
               </div>
             </div>
           ))}

@@ -24,21 +24,21 @@ export default function StrategicPartners() {
   ]
 
   return (
-    <section id="partners" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="partners" className="py-10 md:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
         <p className="text-[#00D084] font-extrabold text-[10px] tracking-[0.2em] uppercase mb-2">Trusted Globally</p>
-        <h2 className="font-jakarta text-3xl font-extrabold text-[#141b2b] mb-4">Strategic Partners</h2>
-        <p className="text-slate-500 text-sm max-w-2xl mx-auto mb-10">From emerging Shopify stores to established wholesale operations, we power the engines of cross-border commerce.</p>
+        <h2 className="font-jakarta text-2xl md:text-3xl font-extrabold text-[#141b2b] mb-3 md:mb-4">Strategic Partners</h2>
+        <p className="text-slate-500 text-xs md:text-sm max-w-2xl mx-auto mb-8 md:mb-10">From emerging Shopify stores to established wholesale operations, we power the engines of cross-border commerce.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-left">
           {partners.map((p) => (
-            <div key={p.name} className="bg-white p-7 rounded-lg border border-slate-100 shadow-sm flex flex-col min-h-[280px] custom-shadow-hover transition-all duration-300">
-              <div className="flex gap-2 mb-6">
+            <div key={p.name} className="bg-white p-5 md:p-7 rounded-lg border border-slate-100 shadow-sm flex flex-col custom-shadow-hover transition-all duration-300">
+              <div className="flex gap-2 mb-4 md:mb-6">
                 {p.tags.map((tag) => (
                   <span key={tag} className="bg-slate-50 text-slate-500 text-[9px] font-extrabold px-2 py-0.5 rounded border border-slate-100 uppercase">{tag}</span>
                 ))}
               </div>
-              <p className="text-[#141b2b] font-medium text-sm leading-relaxed mb-8 flex-grow italic">
+              <p className="text-[#141b2b] font-medium text-sm leading-relaxed mb-6 md:mb-8 flex-grow italic">
                 &ldquo;{p.quote}&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-slate-50">
