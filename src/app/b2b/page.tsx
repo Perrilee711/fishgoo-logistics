@@ -2,21 +2,18 @@ import type { Metadata } from 'next'
 import { getRouteDataEN } from '@/lib/notion'
 import B2BNavbar from '@/components/b2b/B2BNavbar'
 import B2BHero from '@/components/b2b/B2BHero'
-import SocialProofBar from '@/components/b2b/SocialProofBar'
-import PainPoints from '@/components/b2b/PainPoints'
-import HowItWorks from '@/components/b2b/HowItWorks'
+import IntegratedOps from '@/components/b2b/IntegratedOps'
+import DataMetrics from '@/components/b2b/DataMetrics'
 import B2BRouteSearch from '@/components/b2b/B2BRouteSearch'
-import DataResults from '@/components/b2b/DataResults'
-import CaseStudies from '@/components/b2b/CaseStudies'
+import StrategicPartners from '@/components/b2b/StrategicPartners'
 import FAQ from '@/components/b2b/FAQ'
 import QuoteForm from '@/components/b2b/QuoteForm'
-import B2BCTA from '@/components/b2b/B2BCTA'
 import B2BFooter from '@/components/b2b/B2BFooter'
 import BackToTop from '@/components/BackToTop'
 
 export const metadata: Metadata = {
-  title: 'Fishgoo B2B | Sourcing + QC + Shipping for Cross-Border E-Commerce',
-  description: 'Professional China sourcing, quality inspection, and global shipping for Shopify sellers, dropshippers, and wholesalers. 50+ routes across 12 countries. Get a free quote.',
+  title: 'Fishgoo B2B | Global Supply Chain with Precision',
+  description: 'Scalable B2B logistics from sourcing to delivery. 50+ routes across 12 countries. Quality inspection, consolidation, and global shipping for e-commerce sellers.',
 }
 
 export const revalidate = 300
@@ -27,17 +24,14 @@ export default async function B2BPage() {
   return (
     <>
       <B2BNavbar />
-      <main className="pt-20">
+      <main className="pt-[52px]">
         <B2BHero />
-        <SocialProofBar />
-        <PainPoints />
-        <HowItWorks />
+        <IntegratedOps />
+        <DataMetrics />
         <B2BRouteSearch data={routeData} />
-        <DataResults />
-        <CaseStudies />
+        <StrategicPartners />
         <FAQ />
         <QuoteForm />
-        <B2BCTA />
       </main>
       <B2BFooter />
       <BackToTop />

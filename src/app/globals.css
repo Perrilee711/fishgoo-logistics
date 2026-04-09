@@ -107,3 +107,14 @@
 
 /* Count-up animation helper */
 .count-up { font-variant-numeric: tabular-nums; }
+
+/* Stitch B2B v2 styles */
+.hero-gradient-overlay {
+  background: linear-gradient(105deg, rgba(20,27,43,0.98) 0%, rgba(20,27,43,0.85) 45%, rgba(20,27,43,0.3) 100%);
+}
+.custom-shadow-hover { transition: all 0.3s ease; }
+.custom-shadow-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.font-jakarta { font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif; }
