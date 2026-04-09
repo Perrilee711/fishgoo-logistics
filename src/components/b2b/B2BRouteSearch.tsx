@@ -21,22 +21,27 @@ export default function B2BRouteSearch({ data }: { data: RouteDataMap }) {
   if (currentData && currentData.routes.length === 1) cols = 'md:grid-cols-1 max-w-lg mx-auto'
 
   return (
-    <section className="py-24 bg-surface" id="routes">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl font-black text-on-background mb-4 tracking-tight">Global Shipping Coverage</h2>
-          <p className="text-secondary">Browse real-time logistics routes across 12+ countries. Click a country to view available lines.</p>
+    <section className="py-16 bg-white" id="routes">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header — matching Stitch style */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+          <div>
+            <p className="text-[#00D084] font-extrabold text-[10px] tracking-[0.2em] uppercase mb-1">Logistics Network</p>
+            <h2 className="font-jakarta text-2xl font-extrabold text-[#141b2b]">Global Shipping Coverage</h2>
+          </div>
+          <p className="text-slate-500 text-sm">Click a country to view available routes.</p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        {/* Country Tabs — compact, squared style */}
+        <div className="flex flex-wrap gap-1.5 mb-8">
           {countryKeys.map((key) => (
             <button
               key={key}
               onClick={() => handleTabClick(key)}
-              className={`country-tab px-5 py-2 rounded-full font-bold text-sm ${
+              className={`px-3 py-1.5 rounded text-xs font-bold transition-all ${
                 activeCountry === key
-                  ? 'active'
-                  : 'bg-surface-container-high text-secondary'
+                  ? 'bg-[#141b2b] text-white'
+                  : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
               }`}
             >
               {data[key].flag} {data[key].name}
@@ -44,8 +49,9 @@ export default function B2BRouteSearch({ data }: { data: RouteDataMap }) {
           ))}
         </div>
 
+        {/* Route Cards Grid */}
         {currentData && (
-          <div className={`grid ${cols} gap-8`}>
+          <div className={`grid ${cols} gap-4`}>
             {currentData.routes.map((route, i) => (
               <B2BRouteCard key={i} route={route} country={activeCountry} />
             ))}
