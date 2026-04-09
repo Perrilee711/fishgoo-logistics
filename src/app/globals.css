@@ -98,3 +98,12 @@
 .compensation-glow {
   box-shadow: 0 0 60px rgba(0, 208, 132, 0.15);
 }
+
+/* FAQ accordion */
+.faq-details summary { cursor: pointer; list-style: none; }
+.faq-details summary::-webkit-details-marker { display: none; }
+.faq-details .faq-icon { transition: transform 0.2s ease; }
+.faq-details[open] .faq-icon { transform: rotate(180deg); }
+
+/* Count-up animation helper */
+.count-up { font-variant-numeric: tabular-nums; }

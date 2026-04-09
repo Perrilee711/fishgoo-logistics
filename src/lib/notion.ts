@@ -195,3 +195,110 @@ export async function getRouteData(): Promise<RouteDataMap> {
   console.log('[Fallback] Using hardcoded route data')
   return fallbackData
 }
+
+// English fallback data for /b2b page
+const fallbackDataEN: RouteDataMap = {
+  uk: {
+    name: "United Kingdom", flag: "🇬🇧",
+    routes: [
+      { name: "Express Direct Flight", badge: "Delay Guarantee", badgeColor: "primary-container", subtitle: "All-category · DPD delivery · Tax-free clearance", time: "6-12 days", price: "¥192", unit: "from 2kg", features: ["Branded/general/cosmetics/food/supplements", "Direct flight + DPD last-mile", "Up to 50% refund for delays"], tags: ["All-category", "Guaranteed", "DPD"], highlight: true },
+      { name: "Direct Air Line", badge: "Fast", subtitle: "Royal Mail 48h delivery · Tax-free", time: "7-13 days", price: "¥140", unit: "from 2kg", features: ["Branded apparel/shoes/toys/electronics", "HK direct flight + Royal Mail", "Dual clearance, worry-free"], tags: ["Branded", "Direct", "Royal Mail"] },
+      { name: "Apparel Express", badge: "Apparel", subtitle: "Branded apparel channel · Royal Mail 48h", time: "8-13 days", price: "¥158", unit: "from 2kg", features: ["Branded/general apparel & shoes", "Royal Mail 48h delivery", "High customs clearance rate"], tags: ["Apparel", "Branded", "Royal Mail"] },
+      { name: "Shoes & Bags Line", badge: "Actual Weight", badgeColor: "tertiary-container", subtitle: "Billed by actual weight · Keep shoeboxes", time: "10-16 days", price: "¥136", unit: "from 2kg", features: ["Billed by actual weight, not volumetric", "Branded apparel/shoes/bags/electronics", "Keep shoeboxes — ideal for bulky items"], tags: ["Actual Wt", "Branded", "Shoebox"] },
+      { name: "Cosmetics Line", badge: "All-category", subtitle: "Liquids, creams, lipstick · Royal Mail", time: "8-16 days", price: "¥124", unit: "from 2kg", features: ["Liquids/creams/powder/lipstick/eyeshadow", "Food & supplements also accepted", "99%+ customs clearance rate"], tags: ["Cosmetics", "Liquids", "Food"] },
+      { name: "UK Tax-Free Value", badge: "Value", subtitle: "General cargo economy · Royal Mail 48h", time: "10-18 days", price: "¥112", unit: "from 2kg", features: ["General cargo shipping", "Royal Mail 48h delivery", "Lowest UK general cargo rate"], tags: ["General", "Budget", "Royal Mail"] },
+      { name: "Commercial Bulk Line", badge: "Bulk", subtitle: "5kg+ · DPD delivery · Tax-free", time: "7-12 days", price: "¥320", unit: "from 5kg", features: ["Branded/blind boxes/electronics/food/books", "DPD large parcel delivery", "Best for bulk commercial shipping"], tags: ["Bulk", "DPD", "Large"] },
+      { name: "DPD Express Small", badge: "DPD", subtitle: "General cargo direct flight · DPD local", time: "6-12 days", price: "¥156", unit: "from 2kg", features: ["General daily apparel & homeware", "Direct flight, stable schedule", "DPD high delivery success rate"], tags: ["General", "DPD", "Direct"] },
+      { name: "DPD All-Category Small", badge: "DPD Full", subtitle: "All-category · DPD delivery · Tax-free", time: "8-15 days", price: "¥172", unit: "from 2kg", features: ["General/branded/cosmetics/food/supplements", "DPD delivery service", "99%+ customs clearance rate"], tags: ["Full", "DPD", "Cosmetics"] },
+      { name: "UK Sea Freight - P", badge: "Sea", subtitle: "Economy general cargo · DPD/Royal Mail", time: "45-70 days", price: "¥282", unit: "from 15kg", features: ["General cargo / electronics", "Ocean freight + last-mile courier", "Tax-free, lowest cost channel"], tags: ["Sea", "Bulk", "Economy"] },
+      { name: "UK Sea Freight - M", badge: "Sea Full", subtitle: "All-category ocean line · Widest coverage", time: "45-70 days", price: "¥341", unit: "from 15kg", features: ["Branded/meat/pharma/supplements/electronics", "All-category ocean economy line", "Best for large-volume export"], tags: ["Sea", "Full", "Branded"] }
+    ]
+  },
+  us: {
+    name: "United States", flag: "🇺🇸",
+    routes: [
+      { name: "US Tax-Free Line", badge: "Featured", badgeColor: "primary-container", subtitle: "Branded shoes & apparel · USPS delivery", time: "7-14 days", price: "¥343", unit: "from 2kg", features: ["Branded apparel/shoes/hats/bags", "USPS last-mile delivery", "Reliable tax-free clearance"], tags: ["Branded", "Tax-free", "USPS"], highlight: true },
+      { name: "US Apparel Line", badge: "Apparel", subtitle: "Branded apparel · High clearance rate", time: "11-18 days", price: "¥286", unit: "from 2kg", features: ["Branded apparel dedicated channel", "Tax-free clearance mode", "USPS/UNI delivery"], tags: ["Apparel", "Branded", "Tax-free"] },
+      { name: "US Cosmetics Small", badge: "Cosmetics", subtitle: "Cosmetics export dedicated line", time: "6-13 days", price: "¥285", unit: "from 2kg", features: ["Cosmetics dedicated small parcel", "Fast 6-13 day delivery", "Ideal for beauty products"], tags: ["Cosmetics", "Small"] },
+      { name: "General Express", badge: "Fast", subtitle: "General cargo economy · High value", time: "5-11 days", price: "¥236", unit: "from 2kg", features: ["General cargo shipping", "Fast 5-11 day delivery", "Best economy option"], tags: ["General", "Express"] },
+      { name: "UPS Tax-Inclusive", badge: "UPS", subtitle: "International carrier · Tax included", time: "7-15 days", price: "¥401", unit: "from 2kg", features: ["UPS full-service shipping", "Tax included, worry-free", "Ideal for high-value goods"], tags: ["UPS", "Tax-incl"] },
+      { name: "DHL Express", badge: "Fastest", badgeColor: "tertiary-container", subtitle: "DHL fastest · 2-8 day delivery", time: "2-8 days", price: "¥593", unit: "from 2kg", features: ["DHL full-service shipping", "2-8 day express delivery", "Tax-inclusive option"], tags: ["DHL", "Express", "Tax-incl"] },
+      { name: "US Sea Freight Economy", badge: "Sea", subtitle: "Ocean economy · Best for bulk", time: "25-38 days", price: "¥300", unit: "from 15kg", features: ["Ocean economy line", "Ideal for bulk shipments", "Budget-friendly pricing"], tags: ["Sea", "Bulk", "Economy"] }
+    ]
+  },
+  ca: {
+    name: "Canada", flag: "🇨🇦",
+    routes: [
+      { name: "CA Shoes & Bags", badge: "Actual Weight", badgeColor: "primary-container", subtitle: "Billed by actual weight · Keep shoeboxes", time: "12-15 days", price: "Contact Us", unit: "", features: ["Branded apparel/shoes/bags/electronics", "Billed by actual weight", "Keep shoeboxes"], tags: ["Actual Wt", "Branded", "Shoebox"], highlight: true },
+      { name: "CA All-Category", badge: "Full", subtitle: "Widest coverage · Tax-free clearance", time: "12-15 days", price: "Contact Us", unit: "", features: ["Branded/blind boxes/electronics/food/books/knives", "Uniuni/postal delivery", "Tax-free, stable delivery"], tags: ["Full", "Tax-free"] },
+      { name: "CA Apparel Line", badge: "Apparel", subtitle: "Branded apparel dedicated channel", time: "10-14 days", price: "Contact Us", unit: "", features: ["Branded/general apparel", "Mixed last-mile delivery", "Tax-free clearance"], tags: ["Apparel", "Branded"] },
+      { name: "CA Cosmetics Line", badge: "Cosmetics", subtitle: "Cosmetics & skincare dedicated", time: "10-14 days", price: "Contact Us", unit: "", features: ["Cosmetics & skincare products", "Tax-free clearance", "Mixed last-mile delivery"], tags: ["Cosmetics", "Tax-free"] },
+      { name: "CA Sea Freight", badge: "Sea", subtitle: "Ocean economy option", time: "30-35 days", price: "Contact Us", unit: "", features: ["General/all-category ocean", "Economy bulk shipping", "Tax-free channel"], tags: ["Sea", "Bulk"] }
+    ]
+  },
+  au: {
+    name: "Australia", flag: "🇦🇺",
+    routes: [
+      { name: "AU Apparel Line", badge: "Actual Weight", badgeColor: "primary-container", subtitle: "Branded apparel & shoes · Actual weight billing", time: "10-15 days", price: "Contact Us", unit: "", features: ["Branded apparel, shoes & bags", "Billed by actual weight", "Australia Post last-mile"], tags: ["Actual Wt", "Branded", "AusPost"], highlight: true },
+      { name: "Light Small Items Tax-Free", badge: "Light", subtitle: "50g increment · Australia Post", time: "10-15 days", price: "Contact Us", unit: "", features: ["General cargo light items", "Volume factor /8000", "Australia Post delivery"], tags: ["General", "Light", "Tax-free"] }
+    ]
+  },
+  de: {
+    name: "Germany", flag: "🇩🇪",
+    routes: [
+      { name: "Express Direct (Delay Guarantee)", badge: "Delay Guarantee", badgeColor: "primary-container", subtitle: "All-category · DPD delivery · Delay compensation", time: "6-15 days", price: "Contact Us", unit: "", features: ["General/branded/cosmetics/food/supplements", "Direct flight + DPD delivery", "50% refund if >15 days delayed"], tags: ["Full", "Guaranteed", "DPD"], highlight: true }
+    ]
+  },
+  it: {
+    name: "Italy", flag: "🇮🇹",
+    routes: [
+      { name: "Apparel Express", badge: "Apparel", badgeColor: "primary-container", subtitle: "Branded apparel & shoes · DPD delivery", time: "8-15 days", price: "Contact Us", unit: "", features: ["Branded/general apparel, shoes & bags", "DPD delivery, stable performance", "Tax-free, reliable clearance"], tags: ["Apparel", "DPD", "Tax-free"], highlight: true }
+    ]
+  },
+  se: {
+    name: "Sweden", flag: "🇸🇪",
+    routes: [
+      { name: "Shoes & Bags (Actual Weight)", badge: "Actual Weight", badgeColor: "primary-container", subtitle: "Billed by actual weight · Keep shoeboxes", time: "12-18 days", price: "Contact Us", unit: "", features: ["Branded apparel/shoes/bags/electronics", "Billed by actual weight", "Keep shoeboxes"], tags: ["Actual Wt", "Branded", "Shoebox"], highlight: true }
+    ]
+  },
+  nl: {
+    name: "Netherlands", flag: "🇳🇱",
+    routes: [
+      { name: "All-Category Truck-Air", badge: "Economy Pick", badgeColor: "primary-container", subtitle: "Truck-air transit · DPD delivery · Tax-free", time: "15-25 days", price: "Contact Us", unit: "", features: ["Branded/meat/pharma/supplements/electronics", "Truck-air + DPD last-mile", "Tax-free, great value"], tags: ["Full", "Truck-Air", "DPD"], highlight: true }
+    ]
+  },
+  no: {
+    name: "Norway", flag: "🇳🇴",
+    routes: [
+      { name: "NO Apparel Line", badge: "Apparel", badgeColor: "primary-container", subtitle: "Branded apparel · Helthjem delivery", time: "10-18 days", price: "Contact Us", unit: "", features: ["Branded apparel", "Dual clearance, insurable", "Helthjem efficient delivery"], tags: ["Apparel", "Tax-incl", "Branded"], highlight: true }
+    ]
+  },
+  fr: {
+    name: "France", flag: "🇫🇷",
+    routes: [
+      { name: "France Line", badge: "Coming Soon", subtitle: "France route in planning", time: "TBD", price: "Contact Us", unit: "", features: ["Route in planning", "Stay tuned", "Contact us for latest info"], tags: ["Coming Soon"] }
+    ]
+  },
+  es: {
+    name: "Spain", flag: "🇪🇸",
+    routes: [
+      { name: "Spain Line", badge: "Coming Soon", subtitle: "Spain route in planning", time: "TBD", price: "Contact Us", unit: "", features: ["Route in planning", "Stay tuned", "Contact us for latest info"], tags: ["Coming Soon"] }
+    ]
+  },
+  pl: {
+    name: "Poland", flag: "🇵🇱",
+    routes: [
+      { name: "Poland Line", badge: "Coming Soon", subtitle: "Poland route in planning", time: "TBD", price: "Contact Us", unit: "", features: ["Route in planning", "Stay tuned", "Contact us for latest info"], tags: ["Coming Soon"] }
+    ]
+  }
+}
+
+export async function getRouteDataEN(): Promise<RouteDataMap> {
+  const notionData = await fetchFromNotion()
+  if (notionData) {
+    console.log('[Notion] EN data fetched successfully')
+    return notionData
+  }
+  console.log('[Fallback] Using English hardcoded route data')
+  return fallbackDataEN
+}
